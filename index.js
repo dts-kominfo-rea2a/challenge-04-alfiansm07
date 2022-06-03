@@ -8,7 +8,27 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (dates,posisi) =>{
+  const epochTimeArray= []
+  for (let i = 0; i < dates.length; i++) {
+    let epochTime= Date.parse(dates[i])/1000
+    epochTimeArray.push(epochTime)
+  }
+ 
+  // posisi != null ? epochTimeArray[posisi].toString() : epochTimeArray.sort().join("-").toString();
+  if (posisi != null ) {
+    return epochTimeArray[posisi].toString();
+  } else {
+    return epochTimeArray.sort().join("-").toString();
+  };
+}
+
+
+
+
+
+
+
 
 // ! JANGAN DIMODIFIKASI
 (() => {
